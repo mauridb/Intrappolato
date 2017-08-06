@@ -1,0 +1,22 @@
+{
+  "name": "intrappolato",
+  "version": "1.0.0",
+  "description": "il gioco per la gioc",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mauridb/Intrappolato.git"
+  },
+  "author": "BruPolSpa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mauridb/Intrappolato/issues"
+  },
+  "homepage": "https://github.com/mauridb/Intrappolato#readme",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.27.1"
+  }
+}

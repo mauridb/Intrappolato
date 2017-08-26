@@ -15,6 +15,13 @@ TODO:
 -4) indovinelli
 -5) mappa indovinelli
 -6) c'è da organizzare una cena
+-7) Audio errore:
+    -nelson
+    -camera cafè cretino
+    -capra capra capra
+-8) video di invito
+-9) sentire shorty
+-10) pensare alla data   -----IMPORTANTE------
 */
 
 

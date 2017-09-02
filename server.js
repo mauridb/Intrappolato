@@ -9,40 +9,19 @@ TODO:
         -"/sol 3-cacca"
         -"/sol 12-pupù"
 -2) capire i messaggi(SMSprivati) ed il loro testo
-    - 'Siete stati intrappolati! Controllate se volete! La porta è chiusa... Per sapere come uscire aprite il bot su Telegram: t.me/Intrappolato_bot. i BruPolSpa'
+    - 'Siete stati intrappolati! Controllate se volete! La porta è chiusa... Per sapere come uscire aprite il bot su Telegram: t.me/Intrappolato_bot e avviate scrivendo /start. i BruPolSpa'
 
--3) logo
--4) indovinelli
--5) mappa indovinelli
--6) c'è da organizzare una cena
--7) Audio errore:
-    -nelson
-    -camera cafè cretino
-    -capra capra capra
--8) video di invito
--9) sentire shorty
--10) pensare alla data   -----IMPORTANTE------
+-6) c'è da organizzare una cena, organizziamo assieme ad ele (MAURI) cena-mail scrivere da mail BruPolSpa di incontrare ele
+-8) video di invito (BORIS) https://www.youtube.com/watch?v=k3yXl9mQCH0
+-9) sentire shorty (SCRIVERE MAIL)(MICHI)
+-10) pensare alla data 22 settembre??? scrivere a ele 2 o 3 settembre
+-11) capire come rivelarsi, fosforescienti 10 settembre
+-12) prepare quesiti (MICHI)
+-13) posizionare quesiti (MAURI) da 3 giorni prima
+-14) MICHI e MAURI testare il bot
 */
 
 
-var indovinelli = {
-    "1":{
-        "nome": "David",
-        "soluzione":"abbondanza",
-        "indizio":"vai in cucina, indizio"
-    },
-    "2":{
-        "nome": "Cesare",
-        "soluzione":"corretto",
-        "indizio":"locazione quesito successivo, indizio2"
-    },
-    // "3":{
-    //     "nome": "David",
-    //     "soluzione":"abbondanza",
-    //     "indizio":"vai in cucina, indizio"
-    // },
-
-}
 var test = []
 console.log(test)
 
@@ -121,7 +100,7 @@ game.onText(/\/sol (.+)/, (msg, match) => { // gestisce soluzione quesito 1
       case '1':
           if (soluzione == 'corretto'){
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], 'vai in cucina ..');
+              game.sendMessage(test[i], 'quesito 5. \n');
             }
           }else {
               game.sendMessage(chatId, 'ERRORE!!!!');
@@ -131,27 +110,195 @@ game.onText(/\/sol (.+)/, (msg, match) => { // gestisce soluzione quesito 1
       case '2':
           if (soluzione == 'abbondanza'){
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], 'vai a cagare ..');
+              game.sendMessage(test[i], 'quesito 6.\nciò che avete trovato può aiutare a leggere qualcosa di incomprensibile.');
             }
           }else {
               game.sendMessage(chatId, 'ERRORE!!!!');
           }
           break;
-    //   case expression:
-    //
-    //       break;
-    //   case expression:
-    //
-    //       break;
-    //   case expression:
-    //
-    //       break;
-    //   case expression:
-    //
-    //       break;
+      case '3':
+          if (soluzione == '???'){
+            for (var i = 0; i < test.length; i++){
+              game.sendMessage(test[i], 'quesito 4.\nleggerla a un cieco può aiutare');
+            }
+          }else {
+              game.sendMessage(chatId, 'ERRORE!!!!');
+          }
+          break;
+      case '4':
+          if (soluzione == '???'){
+            for (var i = 0; i < test.length; i++){
+              game.sendMessage(test[i], 'quesito 8.\n???');
+            }
+          }else {
+              game.sendMessage(chatId, 'ERRORE!!!!');
+          }
+          break;
+      case '5':
+          if (soluzione == 'abbondanza'){
+            for (var i = 0; i < test.length; i++){
+              game.sendMessage(test[i], 'quesito 5.\na polneve piacciono i cerchi.');
+            }
+          }else {
+              game.sendMessage(chatId, 'ERRORE!!!!');
+          }
+          break;
+      case '6':
+          if (soluzione == '312211'){
+            for (var i = 0; i < test.length; i++){
+              game.sendMessage(test[i], 'quesito 7.\n???');
+            }
+          }else {
+              game.sendMessage(chatId, 'ERRORE!!!!');
+          }
+          break;
+      case '7':
+          if (soluzione == '11' || soluzione == 'undici'){
+            for (var i = 0; i < test.length; i++){
+              game.sendMessage(test[i], 'quesito 11.\nsi accende la candela, si dice buonasera(accento derrone).');
+            }
+          }else {
+              game.sendMessage(chatId, 'ERRORE!!!!');
+          }
+          break;
+      case '8':
+          if (soluzione == '???'){
+            for (var i = 0; i < test.length; i++){
+              game.sendMessage(test[i], 'quesito 12.\n???');
+            }
+          }else {
+              game.sendMessage(chatId, 'ERRORE!!!!');
+          }
+          break;
+      case '9':
+          if (soluzione == '???'){
+            for (var i = 0; i < test.length; i++){
+              game.sendMessage(test[i], 'quesito 10.\n???');
+            }
+          }else {
+              game.sendMessage(chatId, 'ERRORE!!!!');
+          }
+          break;
+      case '10':
+          if (soluzione == '???' ){
+            for (var i = 0; i < test.length; i++){
+              game.sendMessage(test[i], 'quesito 14.\n???');
+            }
+          }else {
+              game.sendMessage(chatId, 'ERRORE!!!!');
+          }
+          break;
+      case '11':
+          if (soluzione == 'agente italiano'){
+            for (var i = 0; i < test.length; i++){
+              game.sendMessage(test[i], 'quesito 15.\na volte le cose non vanno pensate su un foglio di carta.');
+            }
+          }else {
+              game.sendMessage(chatId, 'ERRORE!!!!');
+          }
+          break;
+      case '12':
+          if (soluzione == '???'){
+            for (var i = 0; i < test.length; i++){
+              game.sendMessage(test[i], 'quesito 13.\n???');
+            }
+          }else {
+              game.sendMessage(chatId, 'ERRORE!!!!');
+          }
+          break;
+      case '13':
+          if (soluzione == '???'){
+            for (var i = 0; i < test.length; i++){
+              game.sendMessage(test[i], 'quesito 17.\n???');
+            }
+          }else {
+              game.sendMessage(chatId, 'ERRORE!!!!');
+          }
+          break;
+      case '14':
+          if (soluzione == 'tetraedro' || soluzione == 'piramide'){
+            for (var i = 0; i < test.length; i++){
+              game.sendMessage(test[i], 'quesito 18.\n???');
+            }
+          }else {
+              game.sendMessage(chatId, 'ERRORE!!!!');
+          }
+          break;
+      case '15':
+          if (soluzione == '???'){
+            for (var i = 0; i < test.length; i++){
+              game.sendMessage(test[i], 'quesito 16.\n???');
+            }
+          }else {
+              game.sendMessage(chatId, 'ERRORE!!!!');
+          }
+          break;
+      case '16':
+          if (soluzione == '???'){
+            for (var i = 0; i < test.length; i++){
+              game.sendMessage(test[i], 'quesito 16.\n???');
+            }
+          }else {
+              game.sendMessage(chatId, 'ERRORE!!!!');
+          }
+          break;
+      case '17':
+          if (soluzione == '???'){
+            for (var i = 0; i < test.length; i++){
+              game.sendMessage(test[i], 'quesito 16.\n???');
+            }
+          }else {
+              game.sendMessage(chatId, 'ERRORE!!!!');
+          }
+          break;
+      case '18':
+          if (soluzione == '???'){
+            for (var i = 0; i < test.length; i++){
+              game.sendMessage(test[i], 'quesito 16.\n???');
+            }
+          }else {
+              game.sendMessage(chatId, 'ERRORE!!!!');
+          }
+          break;
+      case '19':
+          if (soluzione == '???'){
+            for (var i = 0; i < test.length; i++){
+              game.sendMessage(test[i], 'quesito 16.\n???');
+            }
+          }else {
+              game.sendMessage(chatId, 'ERRORE!!!!');
+          }
+          break;
+      case '20':
+          if (soluzione == '???'){
+            for (var i = 0; i < test.length; i++){
+              game.sendMessage(test[i], 'quesito 16.\n???');
+            }
+          }else {
+              game.sendMessage(chatId, 'ERRORE!!!!');
+          }
+          break;
+      case '21':
+          if (soluzione == '???'){
+            for (var i = 0; i < test.length; i++){
+              game.sendMessage(test[i], 'quesito 16.\n???');
+            }
+          }else {
+              game.sendMessage(chatId, 'ERRORE!!!!');
+          }
+          break;
+      case 'final':
+          if (soluzione == 'perito meccanico'){
+            for (var i = 0; i < test.length; i++){
+              game.sendMessage(test[i], 'CE L\'AVETE FATTA..\nAFFACCIATEVI DAL BALCONE DELLA PASTORALE');
+            }
+          }else {
+              game.sendMessage(chatId, 'ERRORE!!!!');
+          }
+          break;
 
       default:
-        game.sendMessage(chatId, "Numero non trovato..")
+        game.sendMessage(chatId, "Che minghia guaddi..")
 
   }
 

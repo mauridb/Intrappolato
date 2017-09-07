@@ -194,12 +194,12 @@ game.onText(/\/sol (.+)/, (msg, match) => {
           }
           break;
       case '5':
-          if (soluzione == 'abbondanza'){
+          if (soluzione == '???'){
               if (problem_completed.indexOf(num_quesito)>=0) {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], 'quesito 5.\na polneve piacciono i cerchi.');
+              game.sendMessage(test[i], 'quesito 9.\na polneve piacciono i cerchi.');
             }
             problem_completed.push(num_quesito)
             usernames[chatName] += 1;
@@ -213,25 +213,26 @@ game.onText(/\/sol (.+)/, (msg, match) => {
               }
           }
           break;
-      case '6':
-          if (soluzione == '312211'){
-              if (problem_completed.indexOf(num_quesito)>=0) {
-                game.sendMessage(chatId, "Problema già risolto..")
-              }else{
-            for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], 'quesito 7.\n???');
-            }
-            problem_completed.push(num_quesito)
-            usernames[chatName] += 1;
 
-            }
-          }else {
-              if (flag_error[Math.floor((Math.random() * 2) + 1)] == true) {
-                  game.sendVoice(chatId, funny_errors[Math.floor((Math.random() * 3) + 1)]);
-              }else{
-                  game.sendMessage(chatId, string_errors[Math.floor((Math.random() * string_errors.length-1) + 1)]);
-              }
+      case '6':
+      if (soluzione == '312211'){
+          if (problem_completed.indexOf(num_quesito)>=0) {
+            game.sendMessage(chatId, "Problema già risolto..")
+          }else{
+        for (var i = 0; i < test.length; i++){
+          game.sendMessage(test[i], 'quesito 7.\n');
+        }
+        problem_completed.push(num_quesito)
+        usernames[chatName] += 1;
+
+        }
+      }else {
+          if (flag_error[Math.floor((Math.random() * 2) + 1)] == true) {
+              game.sendVoice(chatId, funny_errors[Math.floor((Math.random() * 3) + 1)]);
+          }else{
+              game.sendMessage(chatId, string_errors[Math.floor((Math.random() * string_errors.length-1) + 1)]);
           }
+      }
           break;
       case '7':
           if (soluzione == '11' || soluzione == 'undici'){
@@ -254,7 +255,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
           }
           break;
       case '8':
-          if (soluzione == '???'){
+          if (soluzione == '5' || soluzione == 'cinque'){
               if (problem_completed.indexOf(num_quesito)>=0) {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
@@ -274,7 +275,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
           }
           break;
       case '9':
-          if (soluzione == '???'){
+          if (soluzione == '6675'){
               if (problem_completed.indexOf(num_quesito)>=0) {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
@@ -394,7 +395,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
           }
           break;
       case '15':
-          if (soluzione == '???'){
+          if (soluzione == 'acobbays'){
               if (problem_completed.indexOf(num_quesito)>=0) {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
@@ -414,12 +415,12 @@ game.onText(/\/sol (.+)/, (msg, match) => {
           }
           break;
       case '16':
-          if (soluzione == '???'){
+          if (soluzione == '21'){
               if (problem_completed.indexOf(num_quesito)>=0) {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], 'quesito 16.\n???');
+              game.sendMessage(test[i], 'quesito 20.\n???');
             }
             problem_completed.push(num_quesito)
             usernames[chatName] += 1;
@@ -434,12 +435,12 @@ game.onText(/\/sol (.+)/, (msg, match) => {
           }
           break;
       case '17':
-          if (soluzione == '???'){
+          if (soluzione == '69'){
               if (problem_completed.indexOf(num_quesito)>=0) {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], 'quesito 16.\n???');
+              game.sendMessage(test[i], 'quesito 21.\nnon sempre una cosa ovvia è corretta, non sempre 2+2=4');
             }
             problem_completed.push(num_quesito)
             usernames[chatName] += 1;
@@ -454,12 +455,12 @@ game.onText(/\/sol (.+)/, (msg, match) => {
           }
           break;
       case '18':
-          if (soluzione == '???'){
+          if (soluzione == 'P' || soluzione == 'p'){
               if (problem_completed.indexOf(num_quesito)>=0) {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], 'quesito 16.\n???');
+              game.sendMessage(test[i], 'quesito 19.\n???');
             }
             problem_completed.push(num_quesito)
             usernames[chatName] += 1;
@@ -474,12 +475,12 @@ game.onText(/\/sol (.+)/, (msg, match) => {
           }
           break;
       case '19':
-          if (soluzione == '???'){
+          if (soluzione == '52'){
               if (problem_completed.indexOf(num_quesito)>=0) {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], 'quesito 16.\n???');
+              game.sendMessage(test[i], '\n???');
             }
             problem_completed.push(num_quesito)
             usernames[chatName] += 1;
@@ -499,7 +500,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], 'quesito 16.\n???');
+              game.sendMessage(test[i], '\n???');
             }
             problem_completed.push(num_quesito)
             usernames[chatName] += 1;
@@ -519,7 +520,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], 'quesito 16.\n???');
+              game.sendMessage(test[i], '\n???');
             }
             problem_completed.push(num_quesito)
             usernames[chatName] += 1;
@@ -533,6 +534,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
               }
           }
           break;
+          //TODO:  al 21 punteggio mandare a tutti il messaggio trovare indizion finale..
       case 'final':
       if (problem_completed.length == 21) {
           if (soluzione == 'perito meccanico'){

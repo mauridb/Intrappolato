@@ -25,11 +25,14 @@ TODO:
 var test = [] // tutti gli user id
 var usernames = {} // usernames del gioco per calcolare i punteggi
 var problem_completed = [] // la lista di tutti gli indovinelli risolti
+var problem_solved = [1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7,8,9,10,1]
+// TODO:EasterEgg trucco per risolvere tutto il gioco, by Polneve (/BruPolSpa I <3 you)
+
 var funny_errors = [
     'Easter Egg',
-    './sounds/capra.mp3',
-    './sounds/funny.mp3',
-    './sounds/Nelson.mp3',
+    './sounds/3.mpeg',
+    './sounds/2.ogg',
+    './sounds/haha.mp3',
 ]
 var string_errors = [
     'Errore caro mio',
@@ -44,6 +47,13 @@ var flag_error = ['Ester Egg',true, false];
 
 
 console.log('Game Running..');
+game.onText(/\/BruPolSpaI<3you/, (msg) => {
+  problem_completed = problem_solved;
+  for (var i = 0; i < test.length; i++){
+      game.sendMessage(test[i], 'Un ultimo sforzo, il quesito finale sta nel quaderno rosso nella biblioteca..\nUna volta risolto digitate \\sol final-...');
+  }
+});
+
 game.onText(/\/start/, (msg) => {
 
       const chatId = msg.chat.id;
@@ -493,6 +503,11 @@ game.onText(/\/sol (.+)/, (msg, match) => {
                   game.sendMessage(chatId, string_errors[Math.floor((Math.random() * string_errors.length-1) + 1)]);
               }
           }
+          if (problem_completed.length == 21) {
+                  for (var i = 0; i < test.length; i++){
+                      game.sendMessage(test[i], 'Un ultimo sforzo, il quesito finale sta nel quaderno rosso nella biblioteca..\nUna volta risolto digitate \\sol final-...');
+                  }
+          }
           break;
       case '20':
           if (soluzione == '???'){
@@ -513,6 +528,11 @@ game.onText(/\/sol (.+)/, (msg, match) => {
                   game.sendMessage(chatId, string_errors[Math.floor((Math.random() * string_errors.length-1) + 1)]);
               }
           }
+          if (problem_completed.length == 21) {
+                  for (var i = 0; i < test.length; i++){
+                      game.sendMessage(test[i], 'Un ultimo sforzo, il quesito finale sta nel quaderno rosso nella biblioteca..\nUna volta risolto digitate \\sol final-...');
+                  }
+          }
           break;
       case '21':
           if (soluzione == '???'){
@@ -532,6 +552,11 @@ game.onText(/\/sol (.+)/, (msg, match) => {
               }else{
                   game.sendMessage(chatId, string_errors[Math.floor((Math.random() * string_errors.length-1) + 1)]);
               }
+          }
+          if (problem_completed.length == 21) {
+                  for (var i = 0; i < test.length; i++){
+                      game.sendMessage(test[i], 'Un ultimo sforzo, il quesito finale sta nel quaderno rosso nella biblioteca..\nUna volta risolto digitate \\sol final-...');
+                  }
           }
           break;
           //TODO:  al 21 punteggio mandare a tutti il messaggio trovare indizion finale..

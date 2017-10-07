@@ -1,6 +1,7 @@
 const TelegramBot = require('node-telegram-bot-api');
 const token = '412462310:AAGfeocr8AAm-aT-kvwGHl5lonE5K2ovjwE';
 const game = new TelegramBot(token, {polling: true});
+const authors = ['Boris','Maurizio','Michele']
 /*
 TODO:
 -1) istruzioni messaggi soluzioni per il player allo start;
@@ -129,7 +130,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
               game.sendMessage(chatId, "Problema già risolto..")
             }else{
                   for (var i = 0; i < test.length; i++){
-                      game.sendMessage(test[i], 'quesito 5. \n');
+                      game.sendMessage(test[i], 'quesito 5. \nPuò aiutare a leggere qualcosa di incomprensibile');
                   }
                   problem_completed.push(num_quesito)
                   usernames[chatName] += 1;
@@ -149,7 +150,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
                 for (var i = 0; i < test.length; i++){
-                  game.sendMessage(test[i], 'quesito 6.\nciò che avete trovato può aiutare a leggere qualcosa di incomprensibile.');
+                  game.sendMessage(test[i], 'quesito 6.\nè sempre meglio descrivere bene la scena che si vede  sopra.');
                 }
                 problem_completed.push(num_quesito)
                 usernames[chatName] += 1;
@@ -169,7 +170,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
                 for (var i = 0; i < test.length; i++){
-                  game.sendMessage(test[i], 'quesito 4.\nleggerla a un cieco può aiutare');
+                  game.sendMessage(test[i], 'quesito 4.\nleggerlo ad un cieco potrebbe aiutare');
                 }
                 problem_completed.push(num_quesito)
                 usernames[chatName] += 1;
@@ -184,7 +185,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
           }
           break;
       case '4':
-          if (soluzione == '???'){
+          if (soluzione == 'orari'){
               if (problem_completed.indexOf(num_quesito)>=0) {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
@@ -204,7 +205,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
           }
           break;
       case '5':
-          if (soluzione == '???'){
+          if (soluzione == 'gufo su ramo'){
               if (problem_completed.indexOf(num_quesito)>=0) {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
@@ -250,7 +251,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], 'quesito 11.\nsi accende la candela, si dice buonasera(accento derrone).');
+              game.sendMessage(test[i], 'quesito 11.\nsi accende la candela, si dice bonaseeeera(accento derrone).');
             }
             problem_completed.push(num_quesito)
             usernames[chatName] += 1;
@@ -270,7 +271,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], 'quesito 12.\n???');
+              game.sendMessage(test[i], 'quesito 12.\nla triste verità che non siamo in cima alla piramide, siamo alla base. Fortunatamente son siamo al livello più basso');
             }
             problem_completed.push(num_quesito)
             usernames[chatName] += 1;
@@ -290,7 +291,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], 'quesito 10.\n???');
+              game.sendMessage(test[i], 'quesito 10.\n2,5,3,1,2');
             }
             problem_completed.push(num_quesito)
             usernames[chatName] += 1;
@@ -305,7 +306,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
           }
           break;
       case '10':
-          if (soluzione == '???' ){
+          if (soluzione == 'z1e' ){
               if (problem_completed.indexOf(num_quesito)>=0) {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
@@ -325,7 +326,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
           }
           break;
       case '11':
-          if (soluzione == 'agente italiano'){
+          if (soluzione == 'agente italiano' || soluzione == 'Agente Italiano'){
               if (problem_completed.indexOf(num_quesito)>=0) {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
@@ -345,7 +346,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
           }
           break;
       case '12':
-          if (soluzione == '???'){
+          if (soluzione == 'bum'){
               if (problem_completed.indexOf(num_quesito)>=0) {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
@@ -365,12 +366,12 @@ game.onText(/\/sol (.+)/, (msg, match) => {
           }
           break;
       case '13':
-          if (soluzione == '???'){
+          if (soluzione == 'giuseppe' || soluzione == 'Giuseppe'){
               if (problem_completed.indexOf(num_quesito)>=0) {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], 'quesito 17.\n???');
+              game.sendMessage(test[i], 'quesito 17.\ngran cosa la forza centrifuga, è sempre meglio partire dal centro');
             }
             problem_completed.push(num_quesito)
             usernames[chatName] += 1;
@@ -510,7 +511,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
           }
           break;
       case '20':
-          if (soluzione == '???'){
+          if (soluzione == '12'){
               if (problem_completed.indexOf(num_quesito)>=0) {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
@@ -535,7 +536,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
           }
           break;
       case '21':
-          if (soluzione == '???'){
+          if (soluzione == 'tomyovytf'){
               if (problem_completed.indexOf(num_quesito)>=0) {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{

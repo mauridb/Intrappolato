@@ -64,13 +64,13 @@ game.onText(/\/start/, (msg) => {
     //   console.log('MSG:');
     //   console.log(msg);
       if (test.indexOf(chatId)>=0) {
-          game.sendMessage(chatId, "Ti sei già registrato..\n Leggi bene le istruzioni.");
+          game.sendMessage(chatId, "Ti sei già registrato testa di zucca, ti faccio rileggere le istruzioni ne :P..\n\n Leggi bene le istruzioni.");
       }else {
           game.sendMessage(chatId, "!!! INTRAPPOLATO !!!\n USERNAME: "+chatName);
           test.push(chatId);
           usernames[chatName] = 0;
       }
-      game.sendMessage(chatId, "ISTRUZIONI:\n Segui attentamente le regole del gioco...\nLa soluzione agli indovinelli va digitata proprio qui nella chat di Telegram.. e dovrà essere rigorosamente scritta nel seguente formato\n<<slash+sol+spaziovuoto+numeroquesito+latuasoluzione>>.\nProprio come vedi nell'esempio qui sotto.\n\n\nESEMPIO:\n''/sol 3-cacca''\n''/sol 12-pupù''\n\n Pensa attentamente alle soluzioni, le vite non sono infinite, per il migliore ci sarà un piccolo premio ;)\n\n\nBuona fortuna <"+chatName+'>\nBruPolSpa');
+      game.sendMessage(chatId, "ISTRUZIONI:\n Segui attentamente le regole del gioco...\nLa soluzione agli indovinelli va digitata proprio qui nella chat di Telegram.. e dovrà essere RIGOROSAMENTE scritta nel seguente formato\n<<slash+sol+spaziovuoto+numeroquesito+latuasoluzione>>.\nProprio come vedi nell'esempio qui sotto.\n\n\nESEMPIO:\n/sol 3-cacca\n/sol 12-pupù\n\n Pensa attentamente alle soluzioni, le vite non sono infinite, per il migliore ci sarà un piccolo premio ;)\n\nNOTA BENE: quando indovinerai riceverai una risposta:\nuna parte del messaggio potrà indicare il luogo e un\'altra parte potrà darti un indizio. \n\n PS: se proprio non dovesse più funzionare niente riavvierò tutto e tu potrai ricominciare premendo il tasto /start, ma se succede riceverai un messaggio!!! \n\n\nBuona fortuna <"+chatName+'>\nBruPolSpa');
 
     //   console.log(test);
     //   console.log(usernames);
@@ -130,7 +130,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
               game.sendMessage(chatId, "Problema già risolto..")
             }else{
                   for (var i = 0; i < test.length; i++){
-                      game.sendMessage(test[i], 'quesito 5. \nPuò aiutare a leggere qualcosa di incomprensibile');
+                      game.sendMessage(test[i], 'USA. è vecchia e ingombrante, ma di solito funziona tranne quando la si far lavorare troppo. in questi casi si ferma e si prende il suo tempo. \n\nPuò aiutare a leggere qualcosa di incomprensibile');
                   }
                   problem_completed.push(num_quesito)
                   usernames[chatName] += 1;
@@ -150,7 +150,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
                 for (var i = 0; i < test.length; i++){
-                  game.sendMessage(test[i], 'quesito 6.\nè sempre meglio descrivere bene la scena che si vede  sopra.');
+                  game.sendMessage(test[i], 'è giunto il momento di mandarvi a cagare(se siete indecisi su dove andare, Polneve consiglia quello a metà). Già che ci siete cercate nel posto più in alto.\n\nè sempre meglio descrivere bene la scena che si vede  sopra.');
                 }
                 problem_completed.push(num_quesito)
                 usernames[chatName] += 1;
@@ -165,12 +165,12 @@ game.onText(/\/sol (.+)/, (msg, match) => {
           }
           break;
       case '3':
-          if (soluzione == '???'){
+          if (soluzione == 'sale' || soluzione == 'Sale'){
               if (problem_completed.indexOf(num_quesito)>=0) {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
                 for (var i = 0; i < test.length; i++){
-                  game.sendMessage(test[i], 'quesito 4.\nleggerlo ad un cieco potrebbe aiutare');
+                  game.sendMessage(test[i], 'Torino. Le cose importanti si trovano dietro i volti delle persone che hanno fatto la GiOC\n\nleggerlo ad un cieco potrebbe aiutare');
                 }
                 problem_completed.push(num_quesito)
                 usernames[chatName] += 1;
@@ -190,7 +190,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], 'quesito 8.\n???');
+              game.sendMessage(test[i], 'In pastorale. r315, più preciso di così.');
             }
             problem_completed.push(num_quesito)
             usernames[chatName] += 1;
@@ -205,12 +205,12 @@ game.onText(/\/sol (.+)/, (msg, match) => {
           }
           break;
       case '5':
-          if (soluzione == 'gufo su ramo'){
+          if (soluzione == 'gufo su ramo' || soluzione == 'Gufo su ramo' || soluzione == 'gufo sul ramo' || soluzione == 'Gufo sul ramo' || soluzione == 'Gufo su un ramo' || soluzione == 'gufo su un ramo'){
               if (problem_completed.indexOf(num_quesito)>=0) {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], 'quesito 9.\na polneve piacciono i cerchi.');
+              game.sendMessage(test[i], 'Forma di associazione costituita da enti (stanza). In bella mostra dietro due giocatori d\'oro si trova la prossima prova\n\na polneve piacciono i cerchi.');
             }
             problem_completed.push(num_quesito)
             usernames[chatName] += 1;
@@ -231,7 +231,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
             game.sendMessage(chatId, "Problema già risolto..")
           }else{
         for (var i = 0; i < test.length; i++){
-          game.sendMessage(test[i], 'quesito 7.\n');
+          game.sendMessage(test[i], 'Stanza federazione comodino nero secondo cassetto (Spaturno è un tipo preciso).');
         }
         problem_completed.push(num_quesito)
         usernames[chatName] += 1;
@@ -251,7 +251,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], 'quesito 11.\nsi accende la candela, si dice bonaseeeera(accento derrone).');
+              game.sendMessage(test[i], 'Master chef. Rendeva la stanza meno spoglia anche se non è stato quasi mai acceso, ora al suo posto si trova una prova.\n\nsi accende la candela, si dice bonaseeeera(accento derrone).');
             }
             problem_completed.push(num_quesito)
             usernames[chatName] += 1;
@@ -271,7 +271,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], 'quesito 12.\nla triste verità che non siamo in cima alla piramide, siamo alla base. Fortunatamente son siamo al livello più basso');
+              game.sendMessage(test[i], 'Il maschile della piccola centrale. C\'è ben poca roba, quella che vi interessa ha uno stile egiziano..\n\nla triste verità che non siamo in cima alla piramide, siamo alla base. Fortunatamente son siamo al livello più basso');
             }
             problem_completed.push(num_quesito)
             usernames[chatName] += 1;
@@ -291,7 +291,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], 'quesito 10.\n2,5,3,1,2');
+              game.sendMessage(test[i], 'Il nostro addetto al suono ha bisogno del mixer, se gli date una mano potreste guadagnarci anche voi.\n\n2,5,3,1,2');
             }
             problem_completed.push(num_quesito)
             usernames[chatName] += 1;
@@ -311,7 +311,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], 'quesito 14.\n???');
+              game.sendMessage(test[i], 'Federazione. Ma che bel ritratto. SALUTI DA IRENE.');
             }
             problem_completed.push(num_quesito)
             usernames[chatName] += 1;
@@ -328,10 +328,10 @@ game.onText(/\/sol (.+)/, (msg, match) => {
       case '11':
           if (soluzione == 'agente italiano' || soluzione == 'Agente Italiano'){
               if (problem_completed.indexOf(num_quesito)>=0) {
-                game.sendMessage(chatId, "Problema già risolto..")
+                game.sendMessage(chatId, "Problema già risolto.")
               }else{
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], 'quesito 15.\na volte le cose non vanno pensate su un foglio di carta.');
+              game.sendMessage(test[i], 'Bruco cappucino non sa nuotare trovate qualcosa che gli possa servire e la ricompensa vi arriverà..\n\na volte le cose non vanno pensate su un foglio di carta.');
             }
             problem_completed.push(num_quesito)
             usernames[chatName] += 1;
@@ -351,7 +351,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], 'quesito 13.\n???');
+              game.sendMessage(test[i], 'Cucina. Al buio sta, sotto fiumi e fiumi di posate.');
             }
             problem_completed.push(num_quesito)
             usernames[chatName] += 1;
@@ -371,7 +371,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], 'quesito 17.\ngran cosa la forza centrifuga, è sempre meglio partire dal centro');
+              game.sendMessage(test[i], 'A casa del 7 bello. Non vi rendete conto neanche dove posate le chiappe, fate più attenzione a dove vi sedete.\ngran cosa la forza centrifuga, è sempre meglio partire dal centro');
             }
             problem_completed.push(num_quesito)
             usernames[chatName] += 1;
@@ -391,7 +391,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], 'quesito 18.\n???');
+              game.sendMessage(test[i], 'Prova di coraggio, andate nel cimitero degli scarafaggi dove gli stolti non si osano avventurare. Bisogna sempre avere delle piastrelle (Polneve suppone che lo siano ma non ne è sicuro) pronte nel caso in cui si dovesse rompere il pavimento.');
             }
             problem_completed.push(num_quesito)
             usernames[chatName] += 1;
@@ -411,7 +411,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], 'quesito 16.\n???');
+              game.sendMessage(test[i], 'Andate al monte Rushmore. Aprite la porta e non fate più di un passo. Leggete un libro a portata di mano, ma che sia quello giusto.');
             }
             problem_completed.push(num_quesito)
             usernames[chatName] += 1;
@@ -431,7 +431,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], 'quesito 20.\n???');
+              game.sendMessage(test[i], 'Non è in nessuna stanza. Sta tra un "mare bianco" e Guadalupe.');
             }
             problem_completed.push(num_quesito)
             usernames[chatName] += 1;
@@ -451,7 +451,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], 'quesito 21.\nnon sempre una cosa ovvia è corretta, non sempre 2+2=4');
+              game.sendMessage(test[i], 'Vi siete mai chiesti cosa ci sia nei cassetti dei tavoli della gioc? Ora è un buon momento per farlo..\n\nnon sempre una cosa ovvia è corretta, non sempre 2+2=4');
             }
             problem_completed.push(num_quesito)
             usernames[chatName] += 1;
@@ -471,7 +471,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], 'quesito 19.\n???');
+              game.sendMessage(test[i], '"Beeeeee". Se non fosse per il nastro adesivo la prova cadrebbe a terra.');
             }
             problem_completed.push(num_quesito)
             usernames[chatName] += 1;
@@ -491,7 +491,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], '\n???');
+              game.sendMessage(test[i],'Quasi alla fine...');
             }
             problem_completed.push(num_quesito)
             usernames[chatName] += 1;
@@ -506,7 +506,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
           }
           if (problem_completed.length == 21) {
                   for (var i = 0; i < test.length; i++){
-                      game.sendMessage(test[i], 'Un ultimo sforzo, il quesito finale sta nel quaderno rosso nella biblioteca..\nUna volta risolto digitate \\sol final-...');
+                      game.sendMessage(test[i], 'Un ultimo sforzo, il quesito finale sta nel quaderno rosso nella biblioteca..\n\nUna volta risolto digitate \\sol final-...');
                   }
           }
           break;
@@ -516,7 +516,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], '\n???');
+              game.sendMessage(test[i], 'Manca veramente poco.. Bravi!');
             }
             problem_completed.push(num_quesito)
             usernames[chatName] += 1;
@@ -531,7 +531,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
           }
           if (problem_completed.length == 21) {
                   for (var i = 0; i < test.length; i++){
-                      game.sendMessage(test[i], 'Un ultimo sforzo, il quesito finale sta nel quaderno rosso nella biblioteca..\nUna volta risolto digitate \\sol final-...');
+                      game.sendMessage(test[i], 'Un ultimo sforzo, il quesito finale sta nel quaderno rosso nella biblioteca..\n\nUna volta risolto digitate \\sol final-...');
                   }
           }
           break;
@@ -541,7 +541,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
                 game.sendMessage(chatId, "Problema già risolto..")
               }else{
             for (var i = 0; i < test.length; i++){
-              game.sendMessage(test[i], '\n???');
+              game.sendMessage(test[i], 'Dai che ci siete..');
             }
             problem_completed.push(num_quesito)
             usernames[chatName] += 1;

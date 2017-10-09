@@ -51,7 +51,7 @@ console.log('Game Running..');
 game.onText(/\/BruPolSpaI<3you/, (msg) => {
   problem_completed = problem_solved;
   for (var i = 0; i < test.length; i++){
-      game.sendMessage(test[i], 'Un ultimo sforzo, il quesito finale sta nel quaderno rosso nella biblioteca..\nUna volta risolto digitate \\sol final-...');
+      game.sendMessage(test[i], 'Un ultimo sforzo, il quesito finale sta nel quaderno verde nella biblioteca..\nUna volta trovata la soluzione digitate:\n\n /sol final-<<..vostra soluzione..>>');
   }
 });
 
@@ -506,7 +506,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
           }
           if (problem_completed.length == 21) {
                   for (var i = 0; i < test.length; i++){
-                      game.sendMessage(test[i], 'Un ultimo sforzo, il quesito finale sta nel quaderno rosso nella biblioteca..\n\nUna volta risolto digitate \\sol final-...');
+                      game.sendMessage(test[i], 'Un ultimo sforzo, il quesito finale sta nel quaderno verde nella biblioteca..\nUna volta trovata la soluzione digitate:\n\n /sol final-<<..vostra soluzione..>>');
                   }
           }
           break;
@@ -531,7 +531,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
           }
           if (problem_completed.length == 21) {
                   for (var i = 0; i < test.length; i++){
-                      game.sendMessage(test[i], 'Un ultimo sforzo, il quesito finale sta nel quaderno rosso nella biblioteca..\n\nUna volta risolto digitate \\sol final-...');
+                      game.sendMessage(test[i], 'Un ultimo sforzo, il quesito finale sta nel quaderno verde nella biblioteca..\nUna volta trovata la soluzione digitate:\n\n /sol final-<<..vostra soluzione..>>');
                   }
           }
           break;
@@ -556,7 +556,7 @@ game.onText(/\/sol (.+)/, (msg, match) => {
           }
           if (problem_completed.length == 21) {
                   for (var i = 0; i < test.length; i++){
-                      game.sendMessage(test[i], 'Un ultimo sforzo, il quesito finale sta nel quaderno verde nella biblioteca..\nUna volta trovata la soluzione digitate:\n\n \\sol final-<<..vostra soluzione..>>');
+                      game.sendMessage(test[i], 'Un ultimo sforzo, il quesito finale sta nel quaderno verde nella biblioteca..\nUna volta trovata la soluzione digitate:\n\n /sol final-<<..vostra soluzione..>>');
                   }
           }
           break;

@@ -556,14 +556,14 @@ game.onText(/\/sol (.+)/, (msg, match) => {
           }
           if (problem_completed.length == 21) {
                   for (var i = 0; i < test.length; i++){
-                      game.sendMessage(test[i], 'Un ultimo sforzo, il quesito finale sta nel quaderno rosso nella biblioteca..\nUna volta risolto digitate \\sol final-...');
+                      game.sendMessage(test[i], 'Un ultimo sforzo, il quesito finale sta nel quaderno verde nella biblioteca..\nUna volta trovata la soluzione digitate:\n\n \\sol final-<<..vostra soluzione..>>');
                   }
           }
           break;
           //TODO:  al 21 punteggio mandare a tutti il messaggio trovare indizion finale..
       case 'final':
       if (problem_completed.length == 21) {
-          if (soluzione == 'perito meccanico'){
+          if (soluzione == 'perito meccanico' || soluzione == 'Perito Meccanico'){
               for (var i = 0; i < test.length; i++){
                   game.sendMessage(test[i], 'CE L\'AVETE FATTA..\nAFFACCIATEVI DAL BALCONE DELLA PASTORALE');
               }
